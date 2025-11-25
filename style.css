@@ -1,4 +1,5 @@
 
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #f4f6fb;
@@ -20,7 +21,30 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 18px;
+}
+
+.model-select-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 320px;
+}
+
+#modelSelect {
+    width: 100%;
+    max-width: 220px;
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: 1px solid #dfe6e9;
+    font-size: 1rem;
+    background: #f8f9fa;
+    color: #2d3436;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
 }
 
 h1 {
@@ -30,10 +54,12 @@ h1 {
     color: #2d3436;
     letter-spacing: 0.5px;
     font-weight: 600;
+    width: 100%;
 }
 
 .container textarea {
     width: 100%;
+    max-width: 320px;
     min-height: 110px;
     max-height: 200px;
     padding: 12px;
@@ -46,6 +72,7 @@ h1 {
     transition: border-color 0.2s;
     box-sizing: border-box;
     display: block;
+    margin: 0 auto;
 }
 .container textarea:focus {
     border-color: #636e72;
@@ -54,7 +81,7 @@ h1 {
 
 #tokenCount {
     font-size: 1.1rem;
-    text-align: right;
+    text-align: center;
     color: #636e72;
     margin-top: 8px;
     font-weight: 500;
@@ -63,6 +90,24 @@ h1 {
     border-radius: 5px;
     box-shadow: 0 1px 4px rgba(44,62,80,0.04);
     transition: background 0.2s, color 0.2s;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#priceEstimate {
+    font-size: 1.05rem;
+    color: #636e72;
+    text-align: center;
+    margin-top: 8px;
+    background: #f1f2f6;
+    padding: 7px 12px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+    white-space: pre-line;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 600px) {
@@ -75,12 +120,25 @@ h1 {
         max-width: 98vw;
         padding: 14px 4px 12px 4px;
         border-radius: 8px;
+        align-items: center;
     }
     h1 {
         font-size: 1.1rem;
     }
-    #tokenCount {
+    #tokenCount, #priceEstimate {
         font-size: 0.95rem;
         padding: 5px 6px;
+        text-align: center;
+        width: 100%;
+    }
+    #modelSelect {
+        font-size: 0.95rem;
+        padding: 5px 6px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    .model-select-wrapper {
+        max-width: 100%;
     }
 }
